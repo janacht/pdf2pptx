@@ -47,7 +47,12 @@ to
 <policy domain="coder" rights="read" pattern="PDF" />
 ```
 
-Now it should work. Note that modifying the policy file would require `root` privileges. If you do not have root access on your machine, you can alternatively compile and use an older version of ImageMagick.
+Note that modifying these policy files requires `root` privileges. If you do not have root access on your machine, you can overwrite the settings for your user account only by first copying the `policy.xml`
+
+```bash
+cp /etc/ImageMagick-6/policy.xml ~/.config/ImageMagick/
+```
+and then changing the corresponding line as mentioned above.
 
 
 # Acknowledgement
